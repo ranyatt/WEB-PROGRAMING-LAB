@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> how to change the bg color after clicking the button </title>
+</head>
+<body style="text-align:center;">
+<h1 "color:green;">Button color</h1>
+<button onclick="myfunc()">click here</button>
+<h2 id="RANIYA" style="color=gray;"</h2>
+<script>
+let result = document.getElementById("RANIYA");
+function changeColor(color) {
+document.body.style.background=color;
+}
+function myFunction(){
+changeColor('yellow');
+result.innerHTML = "Backgroundcolor changed";
+}
+</script>
+</body>
+</html>
