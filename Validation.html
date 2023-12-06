@@ -1,0 +1,80 @@
+<html>
+<title>registration form</title>
+<head>
+<script type="text/javascript">
+function validationform()
+{
+var name=document.forms.names.value;
+var email=document.forms.email.value;
+var password=document.forms.password.value;
+var number=document.forms.number.value;
+var atsymbol=email.indexOf("@");
+var dotsymbol=email.indexOf(".");
+if(name==""){
+alert("name must be filled");
+return false;
+}
+if (password.length<8)
+{
+alert("enter a strong password");
+return false;
+}
+if(number.length!=10)
+{
+alert("enter 10 numbers");
+return false;
+}
+if((atsymbol != -1) && (atsymbol !=0) && (dotsymbol != -1) && (dotsymbol !=0)&& (dotsymbol>atsymbol+1) && (email.length>dotsymbol+1))
+{
+alert("email address is valid");
+return true;
+}
+else{
+
+alert("enter valid email");
+return false;
+}
+
+}
+</script>
+<style>
+
+h1{
+color:white;}
+
+div{
+width:364px;
+
+ text-align:center;
+margin-left:475px;
+margin-top:100px;}
+
+</style>
+<body align="center" >
+<div width=50%>
+</div>
+<div  style="background-color:#73d267" >
+<h1>REGISTRATION FORM</h1>
+<form name="forms" onsubmit="return validationform()">
+<table >
+<tr>
+<td>
+<label>Name</label></td>
+<td><input type="text" name="names"></td></tr>
+
+
+<tr><td><label>Email</label></td>
+<td><input type="text" value="" name="email"></td></tr>
+<tr><td><label>Password</label></td>
+<td><input type="password" name="password"></td></tr>
+<tr><td><label>phone no</label></td>
+<td><input type="text" name="number"></td></tr>
+<tr><td><input type="submit"></td></tr>
+</table>
+</form>
+
+</div>
+
+
+</body>
+</html>
